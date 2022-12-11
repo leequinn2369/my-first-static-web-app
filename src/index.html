@@ -15,7 +15,6 @@
       <script type="text/javascript" src="JS/app.js"></script>
 
   </head>
-
   
   
   <body>
@@ -27,7 +26,7 @@
             <div class="col-2"  ></div>
 
             <div class="col-8" style="text-align: center;">
-              <h3>Video Distrubution Service - User</h3>
+              <h3>Video Distrubution Service - Admin</h3>
             </div>
 
             <style>
@@ -96,42 +95,19 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
-.adminLogin{
-    display: none;
-}
-
-
-
             </style>
 
 
-    <!-- A button to open the popup form -->
-<button class="open-button" onclick="openForm()">Login</button>
+    
 
-<!-- The form -->
-
-<div class="form-popup" id="myForm">
-  <form action="index.html" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+<div id="exclusiveLogin">
+  <button class = "Logout" onClick="document.location = 'library.html'"> Logout</button>
 </div>
-
 
             <div class="col-2"  ></div>
         </div>
 
         <!--New Asset Box-->
-        <div class = "adminLogin"> 
         <div class="row align-items-start">
             <div class="col-2"  ></div>
 
@@ -140,17 +116,17 @@
 
               <form style="font-size: 10pt;" id="newAssetForm">
                 <div class="mb-3">
-                  <label for="FileName" class="form-label">Video Title</label>
+                  <label for="FileName" class="form-label">File</label>
                   <input type="text" class="form-control" id="FileName">
                 </div>
 
                 <div class="mb-3">
-                  <label for="userID" class="form-label">Publisher</label>
+                  <label for="userID" class="form-label">userID</label>
                   <input type="string" class="form-control" id="userID">
                 </div>
 
                 <div class="mb-3">
-                  <label for="userName" class="form-label">Genre</label>
+                  <label for="userName" class="form-label">userName</label>
                   <input type="text" class="form-control" id="userName">
                 </div>
 
@@ -165,8 +141,6 @@
             </div>
 
             <div class="col-2"  ></div>
-        </div>
-            
         </div>
 
         <!-- view Asset Area-->
@@ -185,30 +159,13 @@
               </div>
             </div>
 
-            
-
             <div class="col-2"  ></div>
         </div>
 
     </div>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.fa {
-  font-size: 50px;
-  cursor: pointer;
-  user-select: none;
-}
+    
 
-.fa:hover {
-  color: darkblue;
-}
-</style>
   
   </body>
-
-
-
-
-  
 </html>
