@@ -45,8 +45,11 @@ function submitNewAsset(){
  submitData = new FormData();
  //Get form variables and append them to the form data object
  submitData.append('FileName', $('#FileName').val());
- submitData.append('userID', $('#userID').val());
- submitData.append('userName', $('#userName').val());
+ submitData.append('videoID', $('#videoID').val());
+ submitData.append('videoName', $('#videoName').val());
+ submitData.append('rating', $('#rating').val());
+ submitData.append('genre', $('#genre').val());
+ submitData.append('publisher', $('#publisher').val());
  submitData.append('File', $("#UpFile")[0].files[0]);
 
  //Post the form data to the endpoint, note the need to set the content type header
@@ -79,10 +82,15 @@ $.each( data, function( key, val ) {
 items.push( "<hr />");
 items.push("<video controls> <source type = 'video/mp4' src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />></video>")
 items.push( "File : " + val["fileName"] + "<br />");
-items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
+items.push( "Video Title : " + val["videoName"] + "<br />");
+items.push( "Video ID : " + val["videoID"] + "<br />");
+items.push( "Uploaded by: " + val["publisher"] + " (publisher: "+val["publisher"]+")<br />");
+items.push( "Genre: " + val["genre"] + "<b> rating</b>:" +val["rating"] + "<br />");
 items.push('<button type="button" id="btnDelete" class="btndeletevideo" onclick="videoRemove(\''+val["id"] +'\')">Delete</button>')
 items.push( "<hr />");
 });
+
+
 //Clear the assetlist div
 $('#ImageList').empty();
 //Append the contents of the items array to the ImageList Div
